@@ -1,0 +1,29 @@
+.test-mixin {
+  max-width: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  background: var(--light-blue);
+  color: var(--white);
+
+  &__name {
+    margin-bottom: 20px;
+    @include fontAdaptive(16px, 24px, 600);
+  }
+
+  &__text {
+    @include fontAdaptive(14px, 20px, 500);
+  }
+}
+@include phone {
+  .test-mixin {
+    &__name {
+      margin-bottom: 10px;
+      @include fontAdaptive(14px, 20px, 500);
+    }
+
+    &__text {
+      @include fontAdaptive(12px, 18px, 400)
+    }
+  }
+}
