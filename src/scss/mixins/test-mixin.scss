@@ -9,12 +9,15 @@
   &__name {
     margin-bottom: 20px;
     @include fontAdaptive(16px, 24px, 600);
+    @include fontAdaptive(24px, 24px, 600);
   }
 
   &__text {
     @include fontAdaptive(14px, 20px, 500);
+    @include fontAdaptive(18px, 20px, 500);
   }
 }
+
 @include phone {
   .test-mixin {
     &__name {

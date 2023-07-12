@@ -6,6 +6,7 @@
 html {
   width: 100vw;
   overflow: hidden auto;
+  font-family: 'Roboto', 'sans-serif';
 }
 
 body {
@@ -15,18 +16,25 @@ body {
   min-height: var(--vh);
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-image: url("/assets/images/background-main.jpg");
 }
 
 .body--no-scroll {
   overflow: hidden;
   height: var(--vh);
 }
-*, :before, :after {
+
+*,
+:before,
+:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-header, main, footer {
+
+header,
+main,
+footer {
   width: 100%;
 }
 
@@ -34,6 +42,94 @@ header, main, footer {
 .container {
   margin: 0 auto;
   width: 100%;
+  max-width: 1327px;
 }
 
 @import './_imports';
+
+a {
+  color: var(--white);
+}
+
+.burger-menu {
+  padding: 28px;
+  margin-right: 32px;
+
+  & span {
+    position: relative;
+    width: 15px;
+    height: 2px;
+    border: 20px;
+    background-color: var(--white);
+    display: inline-block;
+
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      border: 20px;
+      background-color: var(--white);
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+}
+
+.header {
+  height: 127px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 0 25px;
+    margin-right: auto;
+    @include fontAdaptive(17px, 24px, 400);
+
+    &-link {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+
+
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      gap: 0 4px;
+    }
+  }
+
+  &__email {
+    margin-right: 23px;
+  }
+
+  &__search {
+    margin-right: 25px;
+  }
+}

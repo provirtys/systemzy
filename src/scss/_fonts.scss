@@ -12,3 +12,6 @@
 // @include font-face(FONT NAME, 'PATH', WEIGHT, NORMAL\ITALIC, FORMATS)
 // @include font-face(Samplinal, fonts/Samplinal, 500, normal, eot woff2 woff)
 
+@include font-face('Roboto', 'fonts/Roboto/Roboto-Regular', 400, normal, 'ttf');
+@include font-face('Roboto', 'fonts/Roboto/Roboto-Medium', 500, normal, 'ttf');
+@include font-face('Roboto', 'fonts/Roboto/Roboto-Bold', 700, normal, 'ttf');
