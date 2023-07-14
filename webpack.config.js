@@ -147,6 +147,7 @@ module.exports = (env, argv) => {
         '@images': path.resolve(__dirname, 'src/images/'),
         '@svg': path.resolve(__dirname, 'src/images/svg'),
         //pug
+        '@assets': path.resolve(__dirname, 'src/pug/assets/'),
         '@templates': path.resolve(__dirname, 'src/pug/templates/'),
         '@pages': path.resolve(__dirname, 'src/pug/pages/'),
         '@components': path.resolve(__dirname, 'src/pug/components/'),

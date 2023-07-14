@@ -1,29 +1,181 @@
+-
+  const menu = [
+    {
+      title: "Компания",
+      url: "/",
+      items: [
+        {
+          title:"О компании",
+          url:"/"
+        },
+        {
+          title:"Партнеры",
+          url:"/"
+        },
+        {
+          title:"Реквизиты",
+          url:"/"
+        },
+        {
+          title:"Отзывы",
+          url:"/"
+        }
+      ]
+    },
+    {
+      title: "Услуги",
+      url: "/",
+      items: [
+        {
+          title:"Гарантия",
+          url:"/"
+        },
+        {
+          title:"Техническая поддержка",
+          url:"/"
+        },
+        {
+          title:"Сервис",
+          url:"/"
+        },
+        {
+          title:"Поставка",
+          url:"/"
+        },
+        {
+          title:"Монтаж и ПНР",
+          url:"/"
+        },
+        {
+          title:"Проектирование",
+          url:"/"
+        }
+      ]
+    },
+    {
+      title: "Решения",
+      url: "/"
+    },
+    {
+      title: "Оборудование",
+      url: "/"
+    },
+    {
+      title: "Импортозамещение",
+      url: "/"
+    },
+    {
+      title: "Контакты",
+      url: "/"
+    },
+  ];
+
 section.header
-  button.burger-menu
+  button.burger-menu.popup-btn(data-popup-open="mega-menu")
     span
   a.header__logo(href="/")
     img.header__logo-image(src='/assets/images/logo.svg', alt="systemzy")
-  ul.header__menu
-    li.header__menu-item
-      a.header__menu-link(href="/") Компания
-    li.header__menu-item
-      a.header__menu-link(href="/") Услуги
-    li.header__menu-item
-      a.header__menu-link(href="/") Решения
-    li.header__menu-item
-      a.header__menu-link(href="/") Каталог оборудования
-    li.header__menu-item
-      a.header__menu-link(href="/") Импортозамещение
-    li.header__menu-item
-      a.header__menu-link(href="/") Контакты
+    if menu && menu.length
+      ul.header__menu
+        each item in menu
+          li.header__menu-item
+            a.header__menu-link(href=item.url)=item.title
   .header__contacts
-    a.header__email info@systemzy.ru
+    a.header__email(href="mailto:info@systemzy.ru")  info@systemzy.ru
     .header__contacts-menu
       img.header__phone-logo(src="/assets/images/phone.svg", alt="")
-      a.header__phone-text 8 (342) 257-90-70
-      button.header__phone-btn 0
-      .header__phone-menu
-        a.header__address
-        .header__time
-  button.header__search
+      a.header__phone-text(href="tel:8342579070")  8 (342) 257-90-70
+      button.header__phone-btn.popup-btn(data-popup-open="header-popup", data-popup-close="header-popup")
+      .popup-menu(data-popup="header-popup")
+        .popup-menu__item 
+          img.popup-menu__item-logo(src="/assets/images/location-logo.svg", alt="")
+          a.popup__link(href="/")  Город, улица, дом
+        .popup-menu__item 
+          img.popup-menu__item-logo(src="/assets/images/time-logo.svg", alt="")
+          a.popup__link(href="/")  Режим работы
+        ul.popup-menu__icons
+          li.popup__icon
+            a.popup__icon-link(href="/")
+              img(src="/assets/images/vk-logo.svg", alt="") 
+          li.popup__icon
+          a.popup__icon-link(href="/")
+              img(src="/assets/images/facebook-logo.svg", alt="") 
+          li.popup__icon
+          a.popup__icon-link(href="/")
+              img(src="/assets/images/twitter-logo.svg", alt="") 
+          li.popup__icon
+          a.popup__icon-link(href="/")
+              img(src="/assets/images/youtube-logo.svg", alt="") 
+          li.popup__icon
+          a.popup__icon-link(href="/")
+              img(src="/assets/images/ok-logo.svg", alt="") 
+  button.header__search-btn.popup-btn(data-popup-open="header-search")
     img(src="/assets/images/search.svg", alt="search")
+  .header__search(data-popup="header-search")
+    .container
+      img.header__search-icon(src="/assets/images/search.svg", alt="search")
+      .header__search-input
+        input.input-search(type="search", placeholder="Начните вводить название товара")
+      button.header__search-start.btn Найти
+      button.header__search-close(data-popup-close="header-search")
+        img(src="/assets/images/close.svg", alt="закрыть поиск")
+  .mega-menu(data-popup="mega-menu")
+    .container 
+      .mega-menu__top
+        a.mega-menu__logo(href="/")
+          img.mega-menu__logo-image(src='/assets/images/logo-dark.svg', alt="systemzy")
+        .mega-menu__search 
+          input.input-search(type="search", placeholder="Начните вводить название товара")
+          include ~@assets/images/search.svg
+        btn.mega-menu__form-btn.btn Задать вопрос
+      .mega-menu__body
+        if menu && menu.length
+          ul.mega-menu__menu
+            each item in menu
+              li.mega-menu__item 
+                a.mega-menu__link(href=item.url)=item.title
+                  if item.items && item.items.length
+                    ul.mega-menu__submenu
+                      each subitem in item.items
+                        li.mega-menu__item
+                          a.mega-menu__link(href=subitem.url)=subitem.title
+        .mega-menu__contacts
+          .mega-menu__contacts-item
+            img.mega__menu__phone-logo(src="/assets/images/phone.svg", alt="")
+            a.mega-menu__phone(href="tel:8342579070")  8 (342) 257-90-70
+            button.header__phone-btn.popup-btn(data-popup-open="mega-menu-popup", data-popup-close="mega-menu-popup")
+            .popup-menu(data-popup="mega-menu-popup")
+              .popup-menu__item 
+                img.popup-menu__item-logo(src="/assets/images/location-logo.svg", alt="")
+                a.popup__link(href="/")  Город, улица, дом
+              .popup-menu__item 
+                img.popup-menu__item-logo(src="/assets/images/time-logo.svg", alt="")
+                a.popup__link(href="/")  Режим работы
+              ul.popup-menu__icons
+                li.popup__icon
+                  a.popup__icon-link(href="/")
+                    img(src="/assets/images/vk-logo.svg", alt="") 
+                li.popup__icon
+                a.popup__icon-link(href="/")
+                    img(src="/assets/images/facebook-logo.svg", alt="") 
+                li.popup__icon
+                a.popup__icon-link(href="/")
+                    img(src="/assets/images/twitter-logo.svg", alt="") 
+                li.popup__icon
+                a.popup__icon-link(href="/")
+                    img(src="/assets/images/youtube-logo.svg", alt="") 
+                li.popup__icon
+                a.popup__icon-link(href="/")
+                  img(src="/assets/images/ok-logo.svg", alt="") 
+          .mega-menu__contacts-item
+            img.mega__menu__phone-logo(src="/assets/images/phone.svg", alt="")
+            a.mega-menu__phone(href="tel:8342579070")  8 (342) 257-90-70
+    
+    button.mega-menu__close-btn(data-popup-close="mega-menu")
+      img(src="/assets/images/close.svg", alt="закрыть меню")
+
+
+
+
+
+
