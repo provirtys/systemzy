@@ -1,0 +1,46 @@
+-
+  const slides = [
+    {
+      title:"Системная интеграция",
+      subtitle:"Решения для Вашего бизнеса",
+      buttonText:"Оставить заявку",
+      img:"assets/images/components/top-slider/1.png"
+    },
+    {
+      title:"Системная интеграция 2",
+      subtitle:"Решения для Вашего бизнеса",
+      buttonText:"Оставить заявку",
+      img:"assets/images/components/top-slider/2.png"
+    },
+    {
+      title:"Системная интеграция 3",
+      subtitle:"Решения для Вашего бизнеса",
+      buttonText:"Оставить заявку",
+      img:"assets/images/components/top-slider/3.png"
+    },
+    {
+      title:"Системная интеграция 4",
+      subtitle:"Решения для Вашего бизнеса",
+      buttonText:"Оставить заявку",
+      img:"assets/images/components/top-slider/4.png"
+    },
+  ];
+section.top-slider
+    .swiper
+      .swiper-wrapper
+        each slide in slides
+          .swiper-slide
+            .container
+              .slide-content
+                .slide-title=slide.title
+                .slide-subtitle=slide.subtitle
+                button.slide-btn.btn=slide.buttonText
+              .slide-img
+                img.slide-img-back(src="assets/images/components/top-slider/img-background.png", alt="куб фон")
+                img.slide-img-front(src=slide.img, alt="куб")
+      .slider-pagination
+      .slider-navigation
+        button.slider-btn.slider-btn--prev
+          include ~@assets/images/components/top-slider/navigation-btn.svg
+        button.slider-btn.slider-btn--next
+          include ~@assets/images/components/top-slider/navigation-btn.svg
