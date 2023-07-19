@@ -1,0 +1,45 @@
+
+
+-
+  const items = [
+    {
+      title:"Серверы и системы хранения данных",
+      img: "assets/images/components/offers/server.svg"
+    },
+    {
+      title:"Системы передачи данных",
+      img:"assets/images/components/offers/transfer.svg"
+    },
+    {
+      title:"Телефония",
+      img:"assets/images/components/offers/telephony.svg"
+    },
+    {
+      title:"Системы видео-конференцсвязи",
+      img:"assets/images/components/offers/videoconference.svg"
+    },
+    {
+      title:"Системы бесперебойного питания",
+      img:"assets/images/components/offers/supply.svg"
+    },
+    {
+      title:"Системы безопасности объектов",
+      img:"assets/images/components/offers/security.svg"
+    }
+  ];
+
+  const src = "assets/images/components/offers/server.svg"
+
+
+section.offers
+  .container 
+      h3.offers__title Направления деятельности
+      p.offers__subtitle Какие решения мы можем Вам предложить
+      .offers__items 
+        each item in items 
+          .offers__item 
+            .offer-img
+              img(src=item.img, alt="")
+              //- include ~@assets/images/components/offers/server.svg
+            p.offer-title=item.title 
+            

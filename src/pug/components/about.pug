@@ -1,0 +1,33 @@
+-
+  const items = [
+    {
+      title:"Сотрудничество с основными производителями оборудования",
+      img: "assets/images/components/about/gear.svg"
+    },
+    {
+      title:"Работаем по всей России",
+      img: "assets/images/components/about/location.svg"
+    },
+    {
+      title:"Реализация проектов разной степени сложности",
+      img: "assets/images/components/about/cube.svg"
+    },
+    {
+      title:"Работаем по гособоронзаказу",
+      img: "assets/images/components/about/shield.svg"
+    },
+  ]
+
+section.about
+  .container 
+    .about__content 
+      span.about__label О компании
+      h2.about__title.title Коротко о нас
+      p.about__description Наша компания выполняет проекты различной сложности, что позволило накопить уникальный опыт и профессионализм наших специалистов. Мы не воспринимаем поставленные задачи от клиента как рутинный процесс, поэтому всегда подробно прорабатываем каждый проект, погружаемся в детали. Такой подход позволяет снизить возможные ошибки на каждом этапе выполнения работ. Географически наша компания работает по всей территории России. Наши клиенты находятся в Чите и Екатеринбурге, ХМАО и Твери, Санкт-Петербурге и Ярославле. Самой большой ценностью для нас является полная удовлетворенность клиента выполненным проектом.
+      button.about__btn.btn Подробнее
+    .about__list
+      each item in items
+        .about__item 
+          .about__item-icon 
+            img(src=item.img, alt="")
+          .about__item-title=item.title

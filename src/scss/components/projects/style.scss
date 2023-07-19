@@ -1,0 +1,108 @@
+.projects {
+
+  & .container {
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--green-4);
+  }
+
+  &__top {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: end;
+    gap: 0 21px;
+    margin-bottom: 29px;
+  }
+
+  &__text {
+    margin-bottom: 41px;
+  }
+
+  &__show-all {
+    color: var(--gray-3);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__tabs {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    margin-bottom: 41px;
+    gap: 0 40px;
+    border-bottom: 1px solid var(--green-4);
+  }
+
+  &__tab {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    cursor: pointer;
+    padding-bottom: 16px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .3s;
+
+
+    &:hover,&--active  {
+      border-bottom: 2px solid var(--green-1);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px 18px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:hover .projects__item-content{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 26px;
+    padding-left: 33px;
+    padding-right: 33px;
+    background: rgba(8, 68, 95, 0.90);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: .3s;
+    transition-property: opacity visibility;
+  }
+
+  &__item-tag {
+    color: var(--gray-4);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 1.08px;
+  }
+}

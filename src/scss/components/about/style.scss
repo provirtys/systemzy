@@ -1,0 +1,52 @@
+.about {
+  margin-top: 95px;
+  padding-bottom: 56px;
+
+  & .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    max-width: 474px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    margin-bottom: 31px;
+  }
+
+  &__btn.btn {
+    max-width: 128px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item-icon{
+    margin-bottom: 15px;
+  }
+
+  &__item-title {
+    max-width: 268px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}

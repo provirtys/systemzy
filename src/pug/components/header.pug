@@ -69,7 +69,6 @@
       url: "/"
     },
   ];
-
 section.header
   button.burger-menu.popup-btn(data-popup-open="mega-menu")
     span
@@ -174,7 +173,20 @@ section.header
     
     button.mega-menu__close-btn(data-popup-close="mega-menu")
       img(src="/assets/images/close.svg", alt="закрыть меню")
-
+  .header.header-fixed
+    .container
+      button.burger-menu.popup-btn(data-popup-open="mega-menu")
+        span
+      a.header__logo(href="/")
+        img.header__logo-image(src='/assets/images/logo.svg', alt="systemzy")
+      if menu && menu.length
+        ul.header__menu
+          each item in menu
+            li.header__menu-item
+              a.header__menu-link(href=item.url)=item.title
+          button.header__menu-dots &bull; &bull; &bull;
+      button.header__search-btn.popup-btn(data-popup-open="header-search")
+        img(src="/assets/images/search.svg", alt="search")
 
 
 

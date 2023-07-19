@@ -1,0 +1,80 @@
+-
+  const tabs = [
+    {
+      id:0,
+      title:"Все проекты",
+      active:true
+    },
+    {
+      id:1,
+      title:"Грузоперевозки",
+    },
+    {
+      id:2,
+      title:"Консалтинг",
+    },
+    {
+      id:3,
+      title:"Проектирование",
+    },
+  ];
+
+  const items = [
+    {
+      title:"Название 1",
+      img:"assets/images/components/projects/1.jpg",
+      tabs:"1,3",
+      tabName:"Консалтинг"
+    },
+    {
+      title:"Название 2",
+      img:"assets/images/components/projects/2.jpg",
+      tabs:"1,3",
+      tabName:"Грузоперевозки"
+    },
+    {
+      title:"Название 3",
+      img:"assets/images/components/projects/3.jpg",
+      tabs:"2,3",
+      tabName:"Проектирование"
+    },
+    {
+      title:"Название 4",
+      img:"assets/images/components/projects/4.jpg",
+      tabs:"2",
+      tabName:"Консалтинг"
+    },
+    {
+      title:"Слияние двух юридических лиц",
+      img:"assets/images/components/projects/5.jpg",
+      tabs:"1,2",
+      tabName:"Консалтинг"
+    },
+    {
+      title:"Название 6",
+      img:"assets/images/components/projects/6.jpg",
+      tabs:"1,2,3",
+      tabName:"Проектирование"
+    }
+  ];
+
+.projects 
+  .container 
+    .projects__top 
+      h2.projects-title.title Проекты
+      button.projects__show-all Показать все
+    .projects__text Наша компания выполняет проекты различной сложности, что позволило накопить уникальный опыт и профессионализм наших специалистов. Мы не воспринимаем поставленные...
+    .projects__tabs 
+      each tab in tabs
+        if tab.active
+          .projects__tab.projects__tab--active(data-tab=tab.id)=tab.title
+        else
+          .projects__tab(data-tab=tab.id)=tab.title
+    .projects__list 
+      each item in items
+        a.projects__item(href="/", data-filter=item.tabs) 
+          .projects__item-img
+            img(src=item.img, alt="")
+          .projects__item-content 
+            .projects__item-tag=item.tabName
+            .projects__item-title=item.title

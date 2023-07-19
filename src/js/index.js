@@ -48,4 +48,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const closePopupBtn = document.querySelector(`[data-popup-close = ${dataPopup}]`);
     toggleClassOpen(btn, closePopupBtn, popup, btn);
   });
+
+  const megaMenu = document.querySelector('.mega-menu')
+
+  const config = {
+    attributes: true,
+    attributeFilter: ['class'] 
+  };
+
+  const html = document.documentElement
+
+  const callback = (mutationList, observer) => {
+    if(mutationList[0].target.classList.contains('open')){
+      html.classList.add('hidden')
+    }
+    else{
+      html.classList.remove('hidden')
+    }
+  };
+
+  const observer = new MutationObserver(callback);
+
+  observer.observe(megaMenu, config);
+
+  const headerFixed = document.querySelector(".header-fixed")
+  window.addEventListener('scroll', () => {
+    headerFixed.classList.toggle('open', scrollY > 0)
+  })
 });

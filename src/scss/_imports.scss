@@ -1,3 +1,8 @@
 @import "./mixins/test-mixin";
 
-@import "./components/top-slider.scss"
+@import "./components/top-slider/style.scss";
+@import "./components/offers/style.scss";
+@import "./components/about/style.scss";
+@import "./components/feedback/style.scss";
+@import "./components/partners/style.scss";
+@import "./components/projects/style.scss";
