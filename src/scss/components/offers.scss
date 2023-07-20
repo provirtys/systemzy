@@ -4,11 +4,9 @@
   color:var(--white);
 
   &__title{
+    @include fontAdaptive(32px,40px,600);
+    font-style: italic;
     margin-bottom: 16px;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px;
   }
 
   &__subtitle{

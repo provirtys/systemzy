@@ -3,5 +3,10 @@ extends ~@templates/main-template
 block vars
   - title = 'Index'
 
-//- block content
-//-   +test-mixin('Название', 'Рандомный текст')
+block content
+  include ~@components/top-slider.pug
+  include ~@components/offers.pug
+  include ~@components/about.pug
+  include ~@components/projects.pug
+  include ~@components/partners.pug
+  include ~@components/feedback.pug

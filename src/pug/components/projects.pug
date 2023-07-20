@@ -59,10 +59,8 @@
   ];
 
 .projects 
-  .container 
-    .projects__top 
-      h2.projects-title.title Проекты
-      button.projects__show-all Показать все
+  .container.projects__container 
+    +show-all('Проекты','Показать все') 
     .projects__text Наша компания выполняет проекты различной сложности, что позволило накопить уникальный опыт и профессионализм наших специалистов. Мы не воспринимаем поставленные...
     .projects__tabs 
       each tab in tabs

@@ -1,0 +1,52 @@
+-
+  const partnerItems = [
+    {
+      img:"assets/images/components/partners/aquarius.jpg"
+    },
+    {
+      img:"assets/images/components/partners/depo.jpg"
+    },
+    {
+      img:"assets/images/components/partners/dlink.jpg"
+    },
+    {
+      img:"assets/images/components/partners/gigalink.jpg"
+    },
+    {
+      img:"assets/images/components/partners/qtech.jpg"
+    },
+    {
+      img:"assets/images/components/partners/yabro.jpg"
+    },
+    {
+      img:"assets/images/components/partners/aquarius.jpg"
+    },
+    {
+      img:"assets/images/components/partners/depo.jpg"
+    },
+    {
+      img:"assets/images/components/partners/dlink.jpg"
+    },
+    {
+      img:"assets/images/components/partners/gigalink.jpg"
+    },
+    {
+      img:"assets/images/components/partners/qtech.jpg"
+    },
+    {
+      img:"assets/images/components/partners/yabro.jpg"
+    },
+  ];
+
+section.partners
+  .container.partners-container
+    +show-all('Партнеры','Показать все')
+    .partners-slider
+      .swiper-wrapper
+        each item in partnerItems
+          .swiper-slide
+            img(src=item.img, alt="")
+    button.slider-btn.slider-btn--prev
+      include ~@assets/images/components/top-slider/navigation-btn.svg
+    button.slider-btn.slider-btn--next
+      include ~@assets/images/components/top-slider/navigation-btn.svg

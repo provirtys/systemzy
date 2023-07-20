@@ -71,10 +71,22 @@ img {
 }
 
 .title {
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  @include fontAdaptive(32px,1,600);
+}
+
+.show-all{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: end;
+  gap: 0 21px;
+  margin-bottom: 29px;
+}
+
+.show-all__button {
+  color: var(--gray-3);
+  @include fontAdaptive(12px,20px,700);
+  text-transform: uppercase;
 }
 
 @import './_imports';
@@ -87,9 +99,7 @@ a {
   display: inline-block;
   color: var(--white);
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 20px;
+  @include fontAdaptive(12px,20px,700);
   background-color: var(--orange);
   padding: 12px 30px;
   width: 100%;
@@ -364,8 +374,7 @@ a {
   }
 
   &__menu {
-    font-size: 24px;
-    font-weight: 700;
+    @include fontAdaptive(24px,1,700);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -380,8 +389,7 @@ a {
     position: absolute;
     left: 270px;
     top: 0;
-    font-size: 18px;
-    font-weight: 400;
+    @include fontAdaptive(18px,1,400);
     opacity: 0;
     visibility: hidden;
     transition-property: opacity, visibility;
