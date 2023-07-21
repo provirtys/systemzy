@@ -1,6 +1,7 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
 Swiper.use([Navigation, Pagination]);
+
 const swiper = new Swiper(".partners-slider", {
   // Optional parameters
   loop: false,
@@ -9,13 +10,13 @@ const swiper = new Swiper(".partners-slider", {
 
   // If we need pagination
   pagination: {
-    el: ".slider-pagination",
+    el: ".partners .slider-pagination",
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: ".slider-btn--next",
-    prevEl: ".slider-btn--prev",
+    nextEl: ".partners .slider-btn--next",
+    prevEl: ".partners .slider-btn--prev",
   },
 
   // And if we need scrollbar

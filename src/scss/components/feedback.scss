@@ -1,0 +1,28 @@
+.feedback{
+  border-top: 1px solid var(--gray-5);
+  padding: 46px 0 71px;
+
+  &__container{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title{
+    margin-bottom: 16px;
+  }
+
+  &__text{
+    margin-bottom: 22px;
+  }
+
+  & &__btn-write{
+    max-width: 120px;
+    margin-right: 12px;
+  }
+
+  & &__btn-call{
+    max-width: 172px;
+  }
+}

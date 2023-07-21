@@ -8,6 +8,7 @@ button {
 
 a {
   text-decoration: none;
+  color:inherit;
 }
 
 ul {
@@ -19,5 +20,25 @@ input, textarea {
   border-radius: 0;
   outline: none;
   resize: none;
+}
+
+input {
+  font-size: inherit;
+  width: 100%;
+  color: var(--gray-2);
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+main {
+  max-width: 100vw;
+}
+
+img {
+  max-width: 100%;
 }
 
