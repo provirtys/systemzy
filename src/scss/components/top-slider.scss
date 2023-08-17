@@ -1,15 +1,24 @@
 .top-slider {
   color: var(--white);
+  height: 100vh;
 
   & .swiper {
     width: 100%;
     height: 777px;
   }
 
+  & .swiper-slide{
+    display: flex;
+  }
+
   & .swiper-slide .container {
     display: grid;
-    grid-template-columns: 1fr 692px;
+    grid-template-columns: 1fr auto;
     align-items: center;
+
+    @include tablet{
+      grid-template-columns: 1fr;
+    }
   }
 
 }
@@ -54,14 +63,24 @@
       max-width: 441px;
     }
   }
+
+  &-content{
+    @include tablet{
+      order: 1;
+    }
+  }
 }
 
 .slider-pagination {
   position: absolute;
   top: 36%;
   left: unset;
-  right: 130px;
+  right: 6vw;
   width: 30px;
+
+  @include tablet{
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -95,4 +114,9 @@
   &--next {
     transform: rotate(180deg);
   }
+
+  @include tablet{
+    display: none;
+  }
 }
+

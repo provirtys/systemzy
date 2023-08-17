@@ -7,6 +7,7 @@
     grid-auto-flow: column;
     justify-content: center;
     align-items: center;
+    gap: 24px 75px;
   }
 
   &__title{
@@ -17,12 +18,42 @@
     margin-bottom: 22px;
   }
 
-  & &__btn-write{
-    max-width: 120px;
+  &__btn-write.btn{
+    width: min-content;
     margin-right: 12px;
+    margin-bottom: 16px;
   }
 
-  & &__btn-call{
-    max-width: 172px;
+  &__btn-call.btn{
+    width: min-content;
+  }
+}
+
+.feedback-img{
+  max-width: 200px;
+}
+
+@include phone{
+  .feedback{
+
+    &__container{
+      grid-auto-flow: row;
+    }
+
+    &__title{
+      @include fontAdaptive(24px, 32px);
+    }
+
+    &__btn-write.btn{
+      width: 195px;
+    }
+
+    &__btn-call.btn{
+      width: 195px;
+    }
+  }
+
+  .feedback-img{
+    max-width: 100px;
   }
 }

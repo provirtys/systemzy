@@ -9,6 +9,24 @@
   &-slider{
     overflow: hidden;
   }
+
+  &__mobile-text{
+    display: none;
+    margin-bottom: 59px;
+    @include fontAdaptive(24px,32px,700);
+
+    @include phone{
+      display: block;
+    }
+  }
+
+  &__show-all{
+    display: block;
+    
+    @include phone{
+      display: none;
+    }
+  }
   
 
   .swiper-slide{

@@ -19,10 +19,14 @@
 
   &__items{
     display: grid;
-    grid-template-columns: repeat(3,315px);
+    grid-template-columns: repeat(auto-fit,315px);
     text-align: center;
     justify-content: space-between;
-    gap: 80px 0;
+    gap: 80px;
+
+    @include tablet{
+      gap: 24px;
+    }
   }
 
   &__item{

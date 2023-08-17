@@ -1,6 +1,8 @@
 // ui
 include ~@mixins/test-mixin
 include ~@mixins/show-all
+include ~@mixins/contacts
+include ~@mixins/fixed-block
 
 block vars
 
@@ -15,3 +17,5 @@ html(lang="ru")
     main
       block content
     include ~@components/footer.pug
+    +fixed-block('block1')
+    +fixed-block('block2')

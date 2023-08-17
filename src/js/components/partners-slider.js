@@ -23,4 +23,16 @@ const swiper = new Swiper(".partners-slider", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+
+  breakpoints:{
+    0:{
+      slidesPerView:1,
+    },
+    480:{
+      slidesPerView:3,
+    },
+    700:{
+      slidesPerView:6
+    }
+  }
 });

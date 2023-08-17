@@ -1,0 +1,13 @@
+mixin contacts(items,className)
+  .contacts(class=className) 
+    .contacts__items
+      each item,idx in items
+        .contacts__item
+          if item.icon
+            .contacts__item-icon !{item.icon}
+          if item.title
+            a.contacts__item-title(item.href ? href=item.href : false)=item.title
+          if item.dropdown 
+            button.contacts__dropdown-btn.popup-btn(data-popup-open="contacts-dropdown-"+idx, data-popup-close="contacts-dropdown-"+idx)
+            .contacts__item-dropdown(data-popup="contacts-dropdown-"+idx)
+              .contacts__dropdown-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, blanditiis."

@@ -1,0 +1,56 @@
+.contacts{
+  
+  &__items{
+    display: grid;
+    justify-items: start;
+  }
+
+  &__item{
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    position: relative;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__item-icon{
+    margin-right: 4px;
+  }
+
+  &__dropdown-btn{
+    padding: 4px 6px;
+    align-self: baseline;
+
+    &:before {
+      content: "";
+      position: relative;
+      top: 10px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--orange);
+  }
+  }
+
+  &__item-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 10px 15px;
+    clip: rect(auto, auto, 0, auto);
+    z-index: 1;
+    color: var(--black);
+    transition: clip 0.2s linear;
+
+    &.open{
+      clip: rect(auto, auto, 10rem, auto);
+    }
+  }
+
+}

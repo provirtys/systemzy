@@ -16,12 +16,14 @@
     margin-bottom: 41px;
     gap: 0 40px;
     border-bottom: 1px solid var(--green-4);
+    overflow:auto hidden;
   }
 
   &__tab {
     cursor: pointer;
     padding-bottom: 16px;
     position: relative;
+    white-space: nowrap;
     @include fontAdaptive(18px, 26px, 600);
 
     &::before {
@@ -91,5 +93,24 @@
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 1.08px;
+  }
+}
+
+@include tablet{
+  .projects{
+
+    &__list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width:576px){
+
+  .projects{
+
+    &__list{
+      grid-template-columns: 1fr;
+    }
   }
 }

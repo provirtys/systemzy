@@ -1,0 +1,139 @@
+-
+  const footerItems = [
+    {
+      name:'catalog',
+      title:"Каталог оборудования",
+      items:[
+        {
+          title:"Сетевое оборудование",
+        },
+        {
+          title:"Беспроводной доступ",
+        },
+        {
+          title:"Серверное оборудование",
+        },
+        {
+          title:"Системы хранения данных",
+        },
+        {
+          title:"Программное обеспечение",
+        },
+        {
+          title:"Телефония",
+        },
+        {
+          title:"Электропитание",
+        },
+        {
+          title:"Видеонаблюдение",
+        },
+      ],
+    },
+    {
+      name:'services',
+      title:"Услуги",
+      items:[
+        {
+          title:"Проектирование",
+        },
+        {
+          title:"Поставка",
+        },
+        {
+          title:"Монтаж и ПНР",
+        },
+        {
+          title:"Техническая поддержка",
+        },
+        {
+          title:"Сервис",
+        },
+        {
+          title:"Гарантия",
+        }
+      ]
+    },
+    {
+      name:'solutions',
+      title:"Решения",
+      items:[
+        {
+          title:"Системы передачи данных",
+        },
+        {
+          title:"Телефония",
+        },
+        {
+          title:"Системы видеоконференцсвязи",
+        },
+        {
+          title:"Вычислительные мощности",
+        },
+        {
+          title:"Системы хранения данных",
+        },
+        {
+          title:"Системы бесперебойного питания",
+        },
+        {
+          title:"Системы видеонаблюдения",
+        },
+        {
+          title:"Системы контроля и управления доступом",
+        },
+      ]
+    }
+  ];
+
+  const contacts = [
+    {
+      title:"8 (342) 257-90-70",
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.81556 11.0589C8.93556 13.26 10.74 15.0567 12.9411 16.1844L14.6522 14.4733C14.8622 14.2633 15.1733 14.1933 15.4456 14.2867C16.3167 14.5744 17.2578 14.73 18.2222 14.73C18.65 14.73 19 15.08 19 15.5078V18.2222C19 18.65 18.65 19 18.2222 19C10.9189 19 5 13.0811 5 5.77778C5 5.35 5.35 5 5.77778 5H8.5C8.92778 5 9.27778 5.35 9.27778 5.77778C9.27778 6.75 9.43333 7.68333 9.72111 8.55444C9.80667 8.82667 9.74444 9.13 9.52667 9.34778L7.81556 11.0589Z" fill="#FF9C08"/></svg>`,
+      href:'tel:83422579070',
+      dropdown: true,
+    },
+    {
+      title:"info@systemzy.ru",
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_112_8189)"><path d="M21 6.75C21 5.7875 20.19 5 19.2 5H4.8C3.81 5 3 5.7875 3 6.75V17.25C3 18.2125 3.81 19 4.8 19H19.2C20.19 19 21 18.2125 21 17.25V6.75ZM19.2 6.75L12 11.125L4.8 6.75H19.2ZM19.2 17.25H4.8V8.5L12 12.875L19.2 8.5V17.25Z" fill="#FF9C08"/></g><defs><clipPath id="clip0_112_8189"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>`,
+      href:'mailto:info@systemzy.ru'
+    },
+    {
+      title:"Город, улица, дом",
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_112_8194)"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM7 9C7 6.24 9.24 4 12 4C14.76 4 17 6.24 17 9C17 11.88 14.12 16.19 12 18.88C9.92 16.21 7 11.85 7 9Z" fill="#FF9C08"/><path d="M12 11.5C13.3807 11.5 14.5 10.3807 14.5 9C14.5 7.61929 13.3807 6.5 12 6.5C10.6193 6.5 9.5 7.61929 9.5 9C9.5 10.3807 10.6193 11.5 12 11.5Z" fill="#FF9C08"/></g><defs><clipPath id="clip0_112_8194"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>`,
+      href:'https://yandex.ru/maps/org/amado/233822961285/?ll=56.248425%2C57.994741&z=14'
+    },
+    {
+      title:"Режим работы",
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_112_8200)"><path d="M11.991 3C7.023 3 3 7.032 3 12C3 16.968 7.023 21 11.991 21C16.968 21 21 16.968 21 12C21 7.032 16.968 3 11.991 3ZM12 19.2C8.022 19.2 4.8 15.978 4.8 12C4.8 8.022 8.022 4.8 12 4.8C15.978 4.8 19.2 8.022 19.2 12C19.2 15.978 15.978 19.2 12 19.2ZM12.45 7.5H11.1V12.9L15.825 15.735L16.5 14.628L12.45 12.225V7.5Z" fill="#FF9C08"/></g><defs><clipPath id="clip0_112_8200"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>`,
+    },
+  ]
+
+footer.footer 
+  .footer__top
+    .footer__background-img 
+      img(src="assets/images/footer-back.png", alt="")
+    .footer__container.container 
+      .footer__logo
+        img(src="assets/images/logo.svg", alt="")
+      .footer__content 
+        .footer__menu
+          each item in footerItems 
+            .footer__menu-column
+              a.footer__link=item.title
+              if item.items && item.items.length > 0
+                ul.footer__submenu 
+                  each subitem in item.items 
+                    li.footer__item 
+                    a.footer__link=subitem.title
+          .footer__menu-column
+            a.footer__link="Контакты"
+            a.footer__link="Реквизиты"
+            +contacts(contacts,'footer__contacts')
+  .footer__bottom 
+    .container
+      .footer__copyrights ООО «СИСТЕМЗИ» 2023 © Все права защищены
+      .footer__politics Политика обработки персональных данных
+
+
+

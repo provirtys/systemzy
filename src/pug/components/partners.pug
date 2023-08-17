@@ -40,7 +40,8 @@
 
 section.partners
   .container.partners-container
-    +show-all('Партнеры','Показать все')
+    +show-all('Партнеры','Показать все','partners__show-all')
+    .partners__mobile-text В наших проектах мы используем современные решения наших партнёров:
     .partners-slider
       .swiper-wrapper
         each item in partnerItems

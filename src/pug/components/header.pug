@@ -69,7 +69,7 @@
       url: "/"
     },
   ];
-section.header
+section.header.header-top
   button.burger-menu.popup-btn(data-popup-open="mega-menu")
     span
   a.header__logo(href="/")
@@ -79,7 +79,15 @@ section.header
       each item in menu
         li.header__menu-item
           a.header__menu-link(href=item.url)=item.title
-      button.header__menu-dots &bull; &bull; &bull;
+      div.header__menu-dots.hidden &bull; &bull; &bull;
+        .header__hidden-menu.hidden-menu.hidden
+          ul.hidden-menu__list.hidden
+            li.hidden-menu__item
+              a.hidden-menu__link(href="/") Страница 1 
+            li.hidden-menu__item
+              a.hidden-menu__link(href="/") Страница 2 
+            li.hidden-menu__item
+              a.hidden-menu__link(href="/") Страница 3
   .header__contacts
     a.header__email(href="mailto:info@systemzy.ru")  info@systemzy.ru
     .header__contacts-menu
@@ -173,20 +181,20 @@ section.header
     
     button.mega-menu__close-btn(data-popup-close="mega-menu")
       img(src="/assets/images/close.svg", alt="закрыть меню")
-  .header.header-fixed
-    .container
-      button.burger-menu.popup-btn(data-popup-open="mega-menu")
-        span
-      a.header__logo(href="/")
-        img.header__logo-image(src='/assets/images/logo.svg', alt="systemzy")
-      if menu && menu.length
-        ul.header__menu
-          each item in menu
-            li.header__menu-item
-              a.header__menu-link(href=item.url)=item.title
-          button.header__menu-dots &bull; &bull; &bull;
-      button.header__search-btn.popup-btn(data-popup-open="header-search")
-        img(src="/assets/images/search.svg", alt="search")
+.header.header-fixed
+  .container
+    button.burger-menu.popup-btn(data-popup-open="mega-menu")
+      span
+    a.header__logo(href="/")
+      img.header__logo-image(src='/assets/images/logo.svg', alt="systemzy")
+    if menu && menu.length
+      ul.header__menu
+        each item in menu
+          li.header__menu-item
+            a.header__menu-link(href=item.url)=item.title
+        button.header__menu-dots &bull; &bull; &bull;
+    button.header__search-btn.popup-btn(data-popup-open="header-search")
+      img(src="/assets/images/search.svg", alt="search")
 
 
 

@@ -1,18 +1,16 @@
 .about {
-  margin-top: 95px;
+  padding-top: 95px;
   padding-bottom: 56px;
 
-  & .container {
+  &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 80px 20px;
   }
 
   &__label {
+    @include fontAdaptive(12px, 20px, 400);
     text-transform: uppercase;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
   }
 
   &__title {
@@ -21,12 +19,9 @@
 
   &__description {
     max-width: 474px;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: justify;
     margin-bottom: 31px;
+    @include fontAdaptive(17px, 24px, 400);
+
   }
 
   &__btn.btn {
@@ -36,17 +31,39 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px 15px;
   }
 
-  &__item-icon{
+  &__item-icon {
     margin-bottom: 15px;
   }
 
   &__item-title {
     max-width: 268px;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 26px;
+    @include fontAdaptive(18px, 26px, 500);
+  }
+}
+
+
+@include tablet {
+
+  .about {
+
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__description {
+      max-width: unset;
+    }
+  }
+}
+
+@include phone {
+  .about {
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
   }
 }
